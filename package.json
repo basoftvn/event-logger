@@ -1,0 +1,19 @@
+{
+  "name": "event-logger",
+  "version": "0.0.1",
+  "author": "BASoft Co., Ltd.",
+  "contributors": [
+    "BASoft Co., Ltd.",
+    "Hai Binh N. <binhmattroi@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basoftvn/event-logger.git"
+  },
+  "private": false,
+  "license": "GPL-v3-or-later",
+  "bugs": {
+    "url": "https://github.com/basoftvn/event-logger/issues"
+  },
+  "homepage": "https://github.com/basoftvn/event-logger#readme"
+}
