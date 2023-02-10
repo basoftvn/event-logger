@@ -6,3 +6,5 @@ export const LogLevels = [
   'verbose',
   'debug',
 ] as const;
+
+export type LogLevels = (typeof LogLevels)[number];

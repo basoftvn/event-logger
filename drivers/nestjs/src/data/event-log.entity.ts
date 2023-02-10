@@ -4,7 +4,7 @@ import { LogLevels } from './log-levels';
 export class EventLogEntity {
   id = v4();
 
-  type!: (typeof LogLevels)[number];
+  type!: LogLevels;
 
   scope!: string;
 
