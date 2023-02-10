@@ -1,5 +1,5 @@
 {
-  "name": "nestjs.event-logger",
+  "name": "@basoftvn/event-logger.nestjs",
   "version": "0.0.1",
   "author": "BASoft Co., Ltd.",
   "contributors": [
@@ -14,5 +14,10 @@
   },
   "devDependencies": {
     "jest": "^29.4.2"
+  },
+  "dependencies": {
+    "@nestjs/common": "^9.3.8",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0"
   }
 }
