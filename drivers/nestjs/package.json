@@ -1,6 +1,6 @@
 {
   "name": "@basoftvn/event-logger.nestjs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -16,6 +16,8 @@
   },
   "scripts": {
     "prebuild": "rimraf dist",
+    "prepack": "npm run build",
+    "prepublish": "npm run build",
     "build": "nest build",
     "test": "jest",
     "test:watch": "jest --watch",
