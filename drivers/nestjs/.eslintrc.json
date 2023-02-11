@@ -1,0 +1,3 @@
+{
+  "ignorePatterns": ["jest.config.js"]
+}
