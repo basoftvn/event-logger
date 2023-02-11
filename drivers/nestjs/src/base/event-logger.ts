@@ -1,7 +1,6 @@
-import { LogLevels } from '../data';
-
 import { Injectable } from '@nestjs/common';
 
+import { LogLevels } from '../data';
 import { EventLogBuilder } from './event-log-builder';
 
 @Injectable()

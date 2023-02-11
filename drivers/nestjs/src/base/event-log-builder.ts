@@ -2,7 +2,6 @@ import { hostname } from 'node:os';
 import { Client } from 'pg';
 
 // import { minimizeStacktrace } from 'fake/path/minimize-stacktrace';
-
 import { EventLogEntity, LogLevels, writeEventLog } from '../data';
 
 export class EventLogBuilder {

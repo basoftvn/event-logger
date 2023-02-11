@@ -1,4 +1,5 @@
 import { ModuleMetadata } from '@nestjs/common';
+
 import { ForRootOptions } from './for-root.options';
 
 export interface ForRootAsyncOptions extends Pick<ModuleMetadata, 'imports'> {

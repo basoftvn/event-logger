@@ -1,10 +1,10 @@
+import { DynamicModule, Module } from '@nestjs/common';
+
 import {
   EventLoggerBaseModule,
   ForRootAsyncOptions,
   ForRootOptions,
-} from 'base';
-
-import { DynamicModule, Module } from '@nestjs/common';
+} from './base';
 
 @Module({})
 export class EventLoggerModule {

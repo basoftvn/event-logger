@@ -1,8 +1,10 @@
-import { DynamicModule, Module, Provider } from '@nestjs/common';
-import { ForRootOptions } from './for-root.options';
-import { ForRootAsyncOptions } from './for-root-async.options';
 import { Client } from 'pg';
+
+import { DynamicModule, Module, Provider } from '@nestjs/common';
+
 import { EventLogger } from './event-logger';
+import { ForRootAsyncOptions } from './for-root-async.options';
+import { ForRootOptions } from './for-root.options';
 
 @Module({})
 export class EventLoggerBaseModule {
