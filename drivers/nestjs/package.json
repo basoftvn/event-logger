@@ -1,12 +1,21 @@
 {
   "name": "@basoftvn/event-logger.nestjs",
-  "version": "0.0.1",
+  "version": "0.0.3",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "author": "BASoft Co., Ltd.",
   "contributors": [
     "BASoft Co., Ltd.",
     "Hai Binh N. <binhmattroi@gmail.com>"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "nest build",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -29,6 +38,7 @@
     "@nestjs/common": "^9.3.8",
     "pg": "^8.9.0",
     "reflect-metadata": "^0.1.13",
+    "rimraf": "^4.1.2",
     "rxjs": "^7.8.0",
     "uuid": "^9.0.0"
   }
