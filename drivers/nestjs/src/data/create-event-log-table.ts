@@ -1,5 +1,6 @@
-import { Client } from 'pg';
 import { createHash } from 'node:crypto';
+import { Client } from 'pg';
+
 import { LogLevels } from './log-levels';
 
 const typeName = createHash('md5').update(LogLevels.join('-')).digest('hex');

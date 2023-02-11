@@ -1,4 +1,5 @@
 import { v4 } from 'uuid';
+
 import { LogLevels } from './log-levels';
 
 export class EventLogEntity {

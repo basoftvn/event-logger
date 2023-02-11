@@ -1,6 +1,7 @@
 import { Client } from 'pg';
-import { EventLogEntity } from './event-log.entity';
 import { v4 } from 'uuid';
+
+import { EventLogEntity } from './event-log.entity';
 import { LogLevels } from './log-levels';
 
 const writeEventLogSql = `
