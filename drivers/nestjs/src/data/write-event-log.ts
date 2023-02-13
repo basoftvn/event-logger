@@ -6,10 +6,10 @@ import { LogLevels } from './log-levels';
 
 const writeEventLogSql = `
     INSERT INTO "EventLogs"(
-        id, type, scope, message, stack, detail, attachment, created_at, source
+        id, type, scope, message, stack, detail, attachment, source
     )
     VALUES (
-        $1, $2, $3, $4, $5, $6, $7, $8, $9
+        $1, $2, $3, $4, $5, $6, $7, $8
     )
 `;
 
@@ -25,7 +25,6 @@ export async function writeEventLog(
     log.stack ?? 'no',
     log.detail,
     JSON.stringify(log.attachment ?? ''),
-    +(log.createdAt ?? new Date()),
     log.source ?? 'UnknownSource',
   ]);
 }
