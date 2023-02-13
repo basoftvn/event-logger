@@ -1,4 +1,7 @@
-import { DynamicModule, Module } from '@nestjs/common';
+import { createEventLogTable } from 'data';
+import { Client } from 'pg';
+
+import { DynamicModule, Inject, Module, OnModuleInit } from '@nestjs/common';
 
 import {
   EventLoggerBaseModule,
@@ -7,7 +10,13 @@ import {
 } from './base';
 
 @Module({})
-export class EventLoggerModule {
+export class EventLoggerModule implements OnModuleInit {
+  public constructor(@Inject('CONNECTION') private readonly client: Client) {}
+
+  public onModuleInit() {
+    createEventLogTable(this.client);
+  }
+
   public static forRootAsync(options: ForRootAsyncOptions): DynamicModule {
     const baseModule = EventLoggerBaseModule.forRootAsync(options);
 
