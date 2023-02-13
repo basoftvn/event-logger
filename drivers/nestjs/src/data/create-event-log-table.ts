@@ -5,7 +5,7 @@ import { LogLevels } from './log-levels';
 
 const typeName = createHash('md5').update(LogLevels.join('-')).digest('hex');
 
-const dropEnumSql = `DROP TYPE ${typeName}`;
+const dropEnumSql = `DROP TYPE IF EXISTS ${typeName}`;
 const createEnumSql = `CREATE TYPE ${typeName} AS ENUM(${LogLevels.map(
   (level) => `'${level}'`,
 ).join(', ')})`;
@@ -13,7 +13,7 @@ const createEnumSql = `CREATE TYPE ${typeName} AS ENUM(${LogLevels.map(
 const createTableSql = `
     CREATE TABLE IF NOT EXISTS "EventLogs"(
         id UUID PRIMARY KEY,
-        type ${typeName} NOT NULL DEFAULT ${LogLevels[0]},
+        type ${typeName} NOT NULL DEFAULT '${LogLevels[0]}',
         scope VARCHAR(50) NOT NULL,
         message VARCHAR(64) NOT NULL,
         stack TEXT,
