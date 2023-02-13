@@ -1,6 +1,6 @@
 {
   "name": "@basoftvn/event-logger.nestjs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -15,6 +15,9 @@
     "access": "public"
   },
   "scripts": {
+    "up:major": "yarn version --major",
+    "up:minor": "yarn version --minor",
+    "up:patch": "yarn version --patch",
     "prebuild": "rimraf dist",
     "prepack": "npm run build",
     "prepublish": "npm run build",
