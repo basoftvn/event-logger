@@ -16,7 +16,7 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "esModuleInterop": false,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "outDir": "./dist",
     "paths": {
       "event-logger": ["./src"],

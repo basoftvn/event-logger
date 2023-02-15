@@ -1,8 +1,8 @@
-import { createEventLogTable } from 'data';
 import { Client } from 'pg';
 
 import { DynamicModule, Module, Provider } from '@nestjs/common';
 
+import { createEventLogTable } from '../data';
 import { EventLogger } from './event-logger';
 import { ForRootAsyncOptions } from './for-root-async.options';
 import { ForRootOptions } from './for-root.options';
